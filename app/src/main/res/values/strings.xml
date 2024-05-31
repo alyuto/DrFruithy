@@ -23,4 +23,9 @@
     <string name="title_saved_text">Title :</string>
     <string name="disease_name">Disease Name</string>
     <string name="disease_text">Disease :</string>
+    <string name="username">username</string>
+    <string name="email">email</string>
+    <string name="edit">edit</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="logout">Logout</string>
 </resources>
