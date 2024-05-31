@@ -1,6 +1,8 @@
 package com.dicoding.drfruithy
 
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -18,6 +20,14 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val toolbar: Toolbar = binding.toolbar
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.apply {
+            displayOptions = ActionBar.DISPLAY_SHOW_TITLE
+            setDisplayShowTitleEnabled(true)
+        }
 
         val navView: BottomNavigationView = binding.navView
 
