@@ -13,15 +13,15 @@
 
     <fragment
         android:id="@+id/navigation_article"
-        android:name="com.dicoding.drfruithy.ui.dashboard.ArticleFragment"
+        android:name="com.dicoding.drfruithy.ui.article.ArticleFragment"
         android:label="@string/title_article"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_article" />
 
     <fragment
         android:id="@+id/navigation_saved"
         android:name="com.dicoding.drfruithy.ui.saved.SavedFragment"
         android:label="@string/title_saved"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_saved" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.dicoding.drfruithy.ui.profile.ProfileFragment"

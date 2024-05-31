@@ -1,10 +1,10 @@
-package com.dicoding.drfruithy.ui.dashboard
+package com.dicoding.drfruithy.ui.article
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class ArticleViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
