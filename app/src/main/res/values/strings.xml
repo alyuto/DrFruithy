@@ -18,4 +18,9 @@
     <string name="guide">Guide</string>
     <string name="guide_description">Guide Description</string>
     <string name="title_guide">Guide</string>
+    <string name="image_saved">image saved</string>
+    <string name="title_saved_item">saved name</string>
+    <string name="title_saved_text">Title :</string>
+    <string name="disease_name">Disease Name</string>
+    <string name="disease_text">Disease :</string>
 </resources>
