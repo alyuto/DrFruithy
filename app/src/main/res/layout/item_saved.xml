@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="10dp"
+                android:textColor="?android:textColorPrimary"
                 android:layout_toEndOf="@+id/image_saved_card"
                 android:text="@string/title_saved_text"/>
 
@@ -42,7 +43,8 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/title_saved_item"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="?android:textColorPrimary"
+                />
 
             <TextView
                 android:id="@+id/disease_saved"
@@ -51,7 +53,10 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/image_saved_card"
-                android:text="@string/disease_text"/>
+                android:text="@string/disease_text"
+                android:textColor="?android:textColorPrimary"
+                />
+
 
             <TextView
                 android:id="@+id/disease_saved_fill"
@@ -62,7 +67,8 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/disease_name"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="?android:textColorPrimary"
+                />
 
 
         </RelativeLayout>

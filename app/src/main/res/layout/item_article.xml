@@ -17,7 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/title_article" />
+            android:text="@string/title_article"
+            android:textColor="?android:textColorPrimary"
+            />
 
     </androidx.cardview.widget.CardView>
 
