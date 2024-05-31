@@ -5,11 +5,17 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.dicoding.drfruithy.databinding.ActivityMainBinding
+import com.dicoding.drfruithy.ui.profile.LightViewFactory
+import com.dicoding.drfruithy.ui.profile.ProfileViewModel
+import com.dicoding.drfruithy.ui.profile.SettingPreferences
+import com.dicoding.drfruithy.ui.profile.dataStore
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,5 +47,22 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+        darkMode()
+    }
+
+    private fun darkMode() {
+        val preferences = SettingPreferences.getInstance(applicationContext.dataStore)
+        val profileViewModel = ViewModelProvider(this, LightViewFactory(preferences)).get(
+            ProfileViewModel::class.java)
+
+        profileViewModel.getThemeSettings().observe(this) { isDarkModeActive: Boolean ->
+            if (isDarkModeActive) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
     }
 }

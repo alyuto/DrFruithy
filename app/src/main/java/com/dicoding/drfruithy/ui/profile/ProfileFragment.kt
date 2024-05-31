@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
@@ -23,7 +22,7 @@ class ProfileFragment : Fragment() {
     ): View {
         (activity as AppCompatActivity).supportActionBar?.title = "Profile"
 
-        val profileViewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+//        val profileViewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -35,8 +34,11 @@ class ProfileFragment : Fragment() {
     private fun darkMode() {
         binding.switchTheme
 
-        binding.switchTheme.setOnCheckedChangeListener{ _: CompoundButton?, isChecked: Boolean ->
-            if(isChecked) {
+        val preferences = SettingPreferences.getInstance(requireContext().dataStore)
+        val profileViewModel = ViewModelProvider(this, LightViewFactory(preferences)).get(ProfileViewModel::class.java)
+
+        profileViewModel.getThemeSettings().observe(viewLifecycleOwner){ isDarkModeActive: Boolean ->
+            if(isDarkModeActive) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 binding.switchTheme.isChecked = true
             }
@@ -44,6 +46,11 @@ class ProfileFragment : Fragment() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 binding.switchTheme.isChecked = false
             }
+
+        }
+
+        binding.switchTheme.setOnCheckedChangeListener{_: CompoundButton?, isChecked: Boolean ->
+            profileViewModel.saveThemeSetting(isChecked)
 
         }
     }
