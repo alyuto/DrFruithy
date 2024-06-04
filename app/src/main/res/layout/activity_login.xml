@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.LoginActivity">
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyRegis"
+        android:orientation="vertical"
+        android:layout_below="@+id/tvLogin"
+        android:padding="20dp">
+
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="57dp"
+            android:id="@+id/edtEmail"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="20dp"
+            android:textColor="?android:textColorPrimary"
+            android:hint="@string/email" />
+
+        <EditText
+            android:layout_width="370dp"
+            android:layout_height="57dp"
+            android:id="@+id/edtPassword"
+            android:background="@drawable/rounded_edittext"
+            android:layout_marginTop="20dp"
+            android:hint="@string/password_space"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lyRegis"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:width="200dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/login"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/btnLogin"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:textColorPrimary"
+            android:text="@string/not_have_account"/>
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textStyle="bold"
+            android:textColor="?android:textColorPrimary"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

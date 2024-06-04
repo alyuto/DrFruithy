@@ -1,4 +1,8 @@
 package com.dicoding.drfruithy.ui.register
 
-class RegisterViewModel {
+import androidx.lifecycle.ViewModel
+import com.dicoding.drfruithy.data.Repository
+
+class RegisterViewModel(private val repository: Repository) : ViewModel(){
+
 }

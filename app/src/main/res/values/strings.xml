@@ -33,4 +33,9 @@
     <string name="manggo">Manggo</string>
     <string name="apple">Apple</string>
     <string name="backbutton">backbutton</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="weclome">Weclome</string>
+    <string name="not_have_account">Not have account?</string>
+    <string name="password_space">Password</string>
 </resources>
