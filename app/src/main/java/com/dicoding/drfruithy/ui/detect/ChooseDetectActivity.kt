@@ -2,11 +2,7 @@ package com.dicoding.drfruithy.ui.detect
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.dicoding.drfruithy.R
 import com.dicoding.drfruithy.databinding.ActivityChooseDetectBinding
 
 class ChooseDetectActivity : AppCompatActivity() {
@@ -24,6 +20,7 @@ class ChooseDetectActivity : AppCompatActivity() {
             apple.setOnClickListener{ intentApple()}
             manggo.setOnClickListener{ intentManggo()}
             tomato.setOnClickListener{ intentTomato()}
+            backButton.setOnClickListener { onBackPressedDispatcher.onBackPressed()}
         }
     }
 

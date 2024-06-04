@@ -22,6 +22,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:title="@string/app_title"/>
 
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/apple"
         android:layout_width="wrap_content"
@@ -37,21 +46,24 @@
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/imageApple"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@color/navBack"
                 android:padding="5dp"
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/apple"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fruit"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/apple"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
                 android:layout_below="@+id/imageApple"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:textColor="?android:textColorPrimary"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -70,20 +82,23 @@
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/imageManggo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@color/navBack"
                 android:padding="5dp"
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/mango"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fruit"
+                android:layout_marginBottom="5dp"
+                android:text="@string/manggo"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
                 android:layout_below="@+id/imageManggo"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:textColor="?android:textColorPrimary"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -102,20 +117,24 @@
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/imageTomato"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:background="@color/navBack"
                 android:padding="5dp"
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@drawable/tomato"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fruit"
+                android:layout_marginBottom="5dp"
+
+                android:text="@string/tomato"
+                android:textSize="16sp"
                 android:layout_gravity="center_vertical"
                 android:layout_below="@+id/imageTomato"
-                android:layout_centerHorizontal="true"/>
+                android:layout_centerHorizontal="true"
+                android:textColor="?android:textColorPrimary"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

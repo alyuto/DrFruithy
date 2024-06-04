@@ -29,4 +29,7 @@
     <string name="dark_mode">Dark Mode</string>
     <string name="logout">Logout</string>
     <string name="fruit">Fruit</string>
+    <string name="tomato">Tomato</string>
+    <string name="manggo">Manggo</string>
+    <string name="apple">Apple</string>
 </resources>
