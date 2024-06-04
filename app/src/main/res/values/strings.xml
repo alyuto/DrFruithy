@@ -28,4 +28,5 @@
     <string name="edit">edit</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="logout">Logout</string>
+    <string name="fruit">Fruit</string>
 </resources>
