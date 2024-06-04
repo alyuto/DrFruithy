@@ -32,4 +32,5 @@
     <string name="tomato">Tomato</string>
     <string name="manggo">Manggo</string>
     <string name="apple">Apple</string>
+    <string name="backbutton">backbutton</string>
 </resources>
