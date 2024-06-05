@@ -4,3 +4,4 @@
 - Fruit plants that can be detected by this application are mangoes, apples, tomatoes, grapes, oranges and bananas.
 - The dataset can be accessed [here](https://drive.google.com/drive/folders/1QLIqWsjUWQK5b-aiLiKlr3bqfDmbhzcg)
 
+
