@@ -17,7 +17,6 @@ class DetectActivity : AppCompatActivity() {
         supportActionBar?.title = "Detect Plaint"
 
         binding.apply {
-
             backButton.setOnClickListener { onBackPressedDispatcher.onBackPressed()}
         }
     }
